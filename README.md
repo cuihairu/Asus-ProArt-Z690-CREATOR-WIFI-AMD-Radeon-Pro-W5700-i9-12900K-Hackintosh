@@ -5,6 +5,12 @@
 
 ---
 
+### Branch
+
+- main: [BCM WIFI](https://github.com/cuihairu/ProArt-Z690-CREATOR-WIFI-W5700-i912900K-Hackintosh)
+- intel-wifi: [intel-wifi](https://github.com/cuihairu/ProArt-Z690-CREATOR-WIFI-W5700-i912900K-Hackintosh/tree/intel-wifi)
+
+
 ### Information 
 
 - macOS: [Sonoma](https://www.apple.com/macos/sonoma/)
