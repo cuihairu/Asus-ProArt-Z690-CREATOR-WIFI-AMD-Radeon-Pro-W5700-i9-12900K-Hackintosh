@@ -23,7 +23,7 @@
 
 | Component    | Variant                   | Link                                                                                                                                         |
 |:------------:|:-------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------:|
-| Mainboard    | ProArt Z690-CREATOR WIFI  | [www.asus.com](https://www.asus.com/hk-en/motherboards-components/motherboards/proart/proart-z690-creator-wifi/)                             |
+| Mainboard    | Asus ProArt Z690-CREATOR WIFI  | [www.asus.com](https://www.asus.com/hk-en/motherboards-components/motherboards/proart/proart-z690-creator-wifi/)                             |
 | Processor    | Intel Core i9 12900K      | [ark.intel.com](https://ark.intel.com/content/www/us/en/ark/products/134599/intel-core-i9-12900k-processor-30m-cache-up-to-5-20-ghz.html)    |
 | DDR5 RAM     | Corsair 128GB             | [www.corsair.com](https://www.corsair.com)                                                                                                   |
 | NVMe SSD     | Aigo P7000Z 2TB           | [www.aigo.com](http://www.aigo.com/memory/udisk1/)                                                                                           |
