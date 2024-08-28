@@ -1,7 +1,7 @@
 # ProArt-Z690-CREATOR-WIFI-W5700-i912900K-Hackintosh
 
 
-![oc](docs/oc.png)
+![oc](docs/mainboard.png)
 
 ---
 
@@ -17,58 +17,44 @@
 
 | Component    | Variant                   | Link                                                                                                                                         |
 |:------------:|:-------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------:|
-| Mainboard    | MEG Z490 GODLIKE          | [www.msi.com](https://www.msi.com/Motherboard/MEG-Z490-GODLIKE/Overview)                                                                     |
-| Processor    | Intel Core i9 10900K      | [ark.intel.com](https://ark.intel.com/content/www/us/en/ark/products/199332/intel-core-i910900k-processor-20m-cache-up-to-5-30-ghz.html)     |
-| DDR4 RAM     | Corsair 128GB             | [www.corsair.com](https://www.corsair.com/ja/zh/%E7%B1%BB%E5%88%AB/%E4%BA%A7%E5%93%81/%E5%86%85%E5%AD%98/VENGEANCE-LPX/p/CMK128GX4M4A2666C16)|
-| NVMe SSD     | Aigo P3500 2TB            | [www.aigo.com](http://www.aigo.com/memory/udisk1/)                                                                                           |
-| Graphics     | AMD Radeon RX 6900xt      | [www.amd.com](https://www.amd.com/en/products/graphics/amd-radeon-rx-6900-xt)                                                                |
-| Audio        | Realtek ALC1220           | [Supported-codecs](https://github.com/acidanthera/AppleALC/wiki/Supported-codecs)                                                            |
-| WiFi / BT    | Intel AX201/BCM94360CD    | [www.intel.com](https://www.intel.com/content/www/us/en/products/sku/130293/intel-wifi-6-ax201-gig/specifications.html)                      |
-| Lan          | Aquantia® AQC107 10G      | [Aquantia]()                                                                                                                                 |    
-| Lan          | Realtek® RTL8125B 2.5G    | [Realtek]()                                                                                                                                  |
+| Mainboard    | ProArt Z690-CREATOR WIFI  | [www.asus.com](https://www.asus.com/hk-en/motherboards-components/motherboards/proart/proart-z690-creator-wifi/)                             |
+| Processor    | Intel Core i9 12900K      | [ark.intel.com](https://ark.intel.com/content/www/us/en/ark/products/134599/intel-core-i9-12900k-processor-30m-cache-up-to-5-20-ghz.html)    |
+| DDR5 RAM     | Corsair 128GB             | [www.corsair.com](https://www.corsair.com)                                                                                                   |
+| NVMe SSD     | Aigo P7000Z 2TB           | [www.aigo.com](http://www.aigo.com/memory/udisk1/)                                                                                           |
+| Graphics     | AMD Radeon Pro W5700      | [www.amd.com](https://www.amd.com/)                                                                                                          |
+| WiFi / BT    | AX210 / BCM94360CD        | [www.intel.com](https://www.intel.com/content/www/us/en/products/sku/130293/intel-wifi-6-ax201-gig/specifications.html)                      |
+| Lan          | Marvell AQtion 10G        | [Marvell]()                                                                                                                                 |    
+| Lan          | Intel I225-V 2.5G         | [Realtek]()                                                                                                                                  |
 | PC Case      | phanteks PH-ES518XTG      | [phanteks.cn](https://phanteks.cn/Evolv_Series/PH-ES518XTG)                                                                                  |
 
-[Specification](https://www.msi.cn/Motherboard/MEG-Z490-GODLIKE/Specification)
 
 ---
 
 ### BIOS 
 
-#### firmware 
+#### === Disable ===
+- Fast Boot
+- Secure Boot
+- Serial/COM Port
+- Parallel Port
+- VT-d (can be enabled if you set DisableIoMapper to YES)
+- Intel VMD(If your BIOS has Intel VMD, you must disable it.)
+- Compatibility Support Module (CSM) (Must be off in most cases, GPU errors/stalls like gIO are common when this option is enabled)
+- Thunderbolt (For initial install, as Thunderbolt can cause issues if not setup correctly)
+- Intel SGX
+- Intel Platform Trust
+- CFG Lock (MSR 0xE2 write protection) (This must be off, if you can't find the option then enable AppleXcpmCfgLock under Kernel -> Quirks. Your hack will not boot with CFG-Lock enabled)
 
-[Version 7C70v1E](https://www.msi.cn/Motherboard/MEG-Z490-GODLIKE/support)
-
-
-#### settings
-
-- Enable D.T.M and Select UEFI Mode
-
-![D.T.M](docs/bios/dtm.bmp)
-
-- Graphic 
-
-![graphic](docs/bios/graphic.bmp)
-
-
-- Close CFG Lock
-- Enable Intel Virtualization Tech
-- Enable Intel VT-D Tech
-- Disable SGX
-
-![cpu_features](docs/bios/cpu_features.bmp)
-![cfg](docs/bios/cfg.bmp)
-
-
-- Secure boot
-
-![secure boot](docs/bios/secure_boot.bmp)
-
-![secure_boot_disable](docs/bios/secure_boot_disable.bmp)
-
-- Fan
-
-![fan](docs/bios/fan.bmp)
-
+#### === Enable ===
+- VT-x
+- Above 4G Decoding
+- Resizable BAR (Optional,Set config.plist-Booter-ResizeAppleGpuBars to 0 if Enabled, or -1 if Disabled.)
+- Hyper-Threading
+- Execute Disable Bit
+- EHCI/XHCI Hand-off
+- OS type: Windows 8.1/10 UEFI Mode (some motherboards may require "Other OS" instead)
+- DVMT Pre-Allocated(iGPU Memory): 64MB or higher
+- SATA Mode: AHCI
 
 
 #### Kexts
